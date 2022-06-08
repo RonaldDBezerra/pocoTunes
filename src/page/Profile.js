@@ -27,7 +27,7 @@ function Profile() {
       <Header />
 
       <div>
-        <img src={imageProfile} />
+        <img alt='test' src={imageProfile} />
         <Link to="/profile/edit">
           <button>Editar perfil</button>
         </Link>

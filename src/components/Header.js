@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+// import heart from '../image/heart'
 
 function Header() {
   const [stateName, setStateName] = useState('');
@@ -13,7 +14,7 @@ function Header() {
   }, []);
 
   return (
-    <header className="flex w-[500px] justify-between bg-slate-200 hover:bg-red-200 duration-500 sm:bg-slate-900 md:bg-red-500 lg:bg-blue-500">
+    <header className="flex w-[500px] sm:bg-slate-900 md:bg-red-500 lg:bg-blue-500">
       <Link to="/search" id="link-to-search">
         Pesquisa
       </Link>
@@ -27,8 +28,9 @@ function Header() {
       </Link>
         <div>
           <span data-testid="header-user-name">{stateName}</span>
-          <img src={imageProfile} />
+          <img alt='test' src={imageProfile} />
         </div>
+
     </header>
   );
 }

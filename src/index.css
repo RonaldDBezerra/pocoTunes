@@ -1,0 +1,40 @@
+/* css do loginTunes */
+
+#contentLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 13%;
+  height: 300px;
+}
+
+#content-HeadPhone {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 308px;
+}
+
+#content-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 70px;
+}
+
+#login-name-input {
+  padding: 5px;
+  border-radius: 10px;
+  border-style:double;
+}
+
+#login-submit-button {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+/* css do Header */
+

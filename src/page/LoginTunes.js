@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { createUser } from '../services/userAPI';
 import context from '../context/context';
 import { Navigate } from 'react-router-dom';
+import HeadPhones from '../imageSVG/HeadPhones';
 
 function LoginTunes() {
   const {
@@ -9,7 +10,6 @@ function LoginTunes() {
     setStateLogin,
     stateValorDoButao,
     setStateValorDoButao,
-    stateLoading,
     setStateLoading,
     stateLoadingIn,
     setStateLoadingIn,
@@ -48,32 +48,30 @@ function LoginTunes() {
   }
 
   return (
-    <div data-testid="page-login">
+    <div data-testid="page-login" id='contentLogin'>
       {stateLoadingIn && <Navigate to="/search" />}
 
-      {stateLoading ? (
-        <span>Carregando...</span>
-      ) : (
-        <form>
-          <input
-            type="text"
-            placeholder="Quem está ouvindo musica?"
-            value={stateLogin}
-            onChange={event => handleChange(event, setStateLogin)}
-            name="login"
-            data-testid="login-name-input"
-          />
+      <HeadPhones />
 
-          <button
-            disabled={stateValorDoButao}
-            onClick={clickButtonUser}
-            type="submit"
-            data-testid="login-submit-button"
-          >
-            Entrar
-          </button>
-        </form>
-      )}
+    <div id='content-inputs'>
+      <input
+        type="text"
+        placeholder="Quem está ouvindo musica?"
+        value={stateLogin}
+        onChange={event => handleChange(event, setStateLogin)}
+        name="login"
+        id="login-name-input"
+      />
+
+        <button
+          disabled={stateValorDoButao}
+          onClick={clickButtonUser}
+          type="submit"
+          id="login-submit-button"
+        >
+          Entrar
+        </button>
+      </div>
     </div>
   );
 }

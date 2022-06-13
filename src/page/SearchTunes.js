@@ -39,11 +39,9 @@ function SearchTunes() {
         key={ album.artistName }
         to={ `/album/${album.collectionId}` }
       >
-        <section> 
+          <img src={ album.artworkUrl100 } alt="imagem do album" />
           <h1>{album.artistName}</h1>
           <p>{album.collectionName}</p>
-          <img src={ album.artworkUrl100 } alt="imagem do album" />
-        </section>
       </Link>
     ));
   }
@@ -51,21 +49,30 @@ function SearchTunes() {
 
 return (
   <section>
-   <Header />
-   <input
-   value={name}
-   onChange={(event) => handleChange(event, setName)} 
-   placeholder='Coloque o nome do artista'>
-   </input>
+    <div>
+      <Header />
+    </div>
 
-   <button
-   onClick={getMusics}>
-     Pesquisar
-   </button>
+    <div id='div-input'>
+      <div id='container-input'>
+        <input
+        value={name}
+        onChange={(event) => handleChange(event, setName)} 
+        placeholder='Coloque o nome do artista'>
+        </input>
+
+        <button
+        onClick={getMusics}>
+          Pesquisar
+        </button>
+      </div>
+    </div>
 {(albunsComplete) && (
   <>
-  <h1>Resultado de álbuns de: {nameSec}</h1>
-  <span> {renderAlbuns(musics)} </span>
+  <div id='container-h1'>
+    <h1>Resultado de: {nameSec}</h1>
+  </div>
+  <span id='container-span'> {renderAlbuns(musics)} </span>
   </>
 )}
  </section> 

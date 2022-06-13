@@ -14,21 +14,27 @@ function Header() {
   }, []);
 
   return (
-    <header className="flex w-[500px] sm:bg-slate-900 md:bg-red-500 lg:bg-blue-500">
-      <Link to="/search" id="link-to-search">
-        Pesquisa
-      </Link>
+    <header id='header-container'>
+      <nav id='header-nav'>
+        <Link to="/search"  className='link' id="link-to-search">
+          Pesquisa
+        </Link>
 
-      <Link to="/favorites" id="link-to-favorites">
-        Favorito
-      </Link>
+        <Link to="/favorites" className='link' id="link-to-favorites">
+          Favorito
+        </Link>
 
-      <Link to="/profile" id="link-to-profile">
-        Meu perfil
-      </Link>
-        <div>
-          <span data-testid="header-user-name">{stateName}</span>
-          <img alt='test' src={imageProfile} />
+        <Link to="/profile" className='link' id="link-to-profile">
+          Meu perfil
+        </Link>
+      </nav>
+        <div id="header-info">
+          <div>
+            <span id="header-user-name">{stateName}</span>
+          </div>
+          <div>
+            <img id='image-header' alt='test' src={imageProfile} />
+          </div>
         </div>
 
     </header>

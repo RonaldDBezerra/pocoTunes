@@ -38,3 +38,125 @@
 
 /* css do Header */
 
+#header-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 75px;
+  background-color: rgb(39, 212, 97);
+  border-radius: 10px;
+}
+
+#header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 250px;
+  padding-top: 2%;
+}
+
+#header-nav :hover {
+  color: red;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+#header-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  padding-top: 1%;
+}
+
+#image-header {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+/* css do search */
+
+#div-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container-input {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 350px;
+  margin-top: 60px;
+}
+
+#container-input input {
+  padding: 1%;
+  border-radius: 10px;
+  border-style: double;
+}
+
+#container-input button {
+  cursor: pointer;
+  border-radius: 4px;
+  border-style: double;
+  padding: 3px;
+}
+
+/* css search */
+
+#container-h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#container-span {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+#container-span a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 200px;
+  min-width: 200px;
+  padding: 2%;
+  margin-top: 30px;
+  margin-right: 30px;
+  
+  color: black;
+  text-decoration: none;
+  background-color: rgb(39, 212, 97);
+  border-radius: 10%;
+}
+
+#container-span :hover {
+  background-color: rgb(49, 143, 80);
+  transition: transform 5s;
+  transform: translateX(0) scale(1.1);
+}
+
+#container-span a h1 {
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#container-span a p {
+  max-width: 250px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}

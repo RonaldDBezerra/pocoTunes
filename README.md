@@ -14,3 +14,7 @@ Download project dependencies
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+## OBS
+
+project still in development, I'm making some improvements
